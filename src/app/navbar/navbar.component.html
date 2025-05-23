@@ -1,11 +1,26 @@
-<nav class="navbar">
-  <div class="navbar-logo">
+<nav
+  class="flex justify-between bg-black opacity-80 shadow-md fixed w-full p-3 top-0 z-50"
+>
+  <div class="flex flex-col justify-center items-center ml-3">
     <img src="assets/logo.png" alt="App Logo" />
   </div>
-  <ul class="navbar-links">
-    <li><a routerLink="/">Home</a></li>
-    <li><a routerLink="/coffee">Coffee</a></li>
-    <li><a routerLink="/about">About</a></li>
-    <li><a routerLink="/contact">Blog</a></li>
+  <ul class="flex justify-center items-center ml-3 gap-3 text-white">
+    <li class="cursor-pointer hover:text-gray-400">
+      <a routerLink="/">Home</a>
+    </li>
+    <li class="cursor-pointer hover:text-gray-400">
+      <a routerLink="/coffee">Coffee</a>
+    </li>
+    <li class="cursor-pointer hover:text-gray-400">
+      <a routerLink="/about">About</a>
+    </li>
+    <li class="cursor-pointer hover:text-gray-400">
+      <a routerLink="/contact">Contact</a>
+    </li>
   </ul>
+  <input
+    type="text"
+    class="flex justify-center items-center w-90 text-black bg-white placeholder:text-black p-3 mr-3 rounded-lg"
+    placeholder="Search"
+  />
 </nav>
