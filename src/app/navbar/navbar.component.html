@@ -1,10 +1,18 @@
 <nav
-  class="flex justify-between bg-black opacity-80 shadow-md fixed w-full p-3 top-0 z-50"
+  class="flex items-center justify-between bg-black opacity-80 shadow-md fixed w-full p-3 top-0 z-50"
 >
   <div class="flex flex-col justify-center items-center ml-3">
-    <img src="assets/logo.png" alt="App Logo" />
+    <div>
+      <img
+        src="https://thumbs.dreamstime.com/b/coffee-cup-vector-icon-steam-hot-drink-81730552.jpg"
+        alt="App Logo"
+        class="w-20 h-20 rounded-md cursor-pointer"
+      />
+    </div>
   </div>
-  <ul class="flex justify-center items-center ml-3 gap-3 text-white">
+  <ul
+    class="flex justify-center items-center text-center gap-3 text-white text-2xl"
+  >
     <li class="cursor-pointer hover:text-gray-400">
       <a routerLink="/">Home</a>
     </li>
@@ -20,7 +28,7 @@
   </ul>
   <input
     type="text"
-    class="flex justify-center items-center w-90 text-black bg-white placeholder:text-black p-3 mr-3 rounded-lg"
+    class="flex justify-center items-center w-90 h-10 text-black bg-white placeholder:text-black p-3 mr-3 rounded-lg"
     placeholder="Search"
   />
 </nav>
