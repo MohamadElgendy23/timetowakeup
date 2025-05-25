@@ -7,7 +7,7 @@ import { CoffeeComponent } from './coffee/coffee.component';
 import { RandomComponent } from './random/random.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'coffee', component: CoffeeComponent },
   { path: 'random', component: RandomComponent },
