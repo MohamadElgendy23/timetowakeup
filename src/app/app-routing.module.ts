@@ -6,17 +6,11 @@ import { ContactComponent } from './contact/contact.component';
 import { CoffeeComponent } from './coffee/coffee.component';
 import { RandomComponent } from './random/random.component';
 
-const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'coffee', component: CoffeeComponent },
   { path: 'random', component: RandomComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}

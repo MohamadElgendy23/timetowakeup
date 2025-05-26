@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './coffee.component.html',
-  styleUrl: './coffee.component.css',
+  styleUrls: ['./coffee.component.css'],
 })
 export class CoffeeComponent {}
