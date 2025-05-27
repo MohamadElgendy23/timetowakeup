@@ -4,9 +4,6 @@ A modern, coffee-themed web application built with Angular and powered by AI. Di
 
 ![Coffee App Banner](src/assets/background.png)
 
-
-[🔗 Live Demo](timetowakeup-ndw9yu6cs-mohamadelgendy23s-projects.vercel.app)
-
 ## ✨ Features
 
 - 🖼️ **Dynamic Coffee Image Gallery**
