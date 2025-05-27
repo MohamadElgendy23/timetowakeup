@@ -4,41 +4,8 @@ A modern, coffee-themed web application built with Angular and powered by AI. Di
 
 ![Coffee App Banner](src/assets/background.png)
 
-## 🎥 Demo
 
-https://github.com/MohamadElgendy23/timetowakeup/assets/demo.mp4
-
-[🔗 Live Demo](https://mohamadelgendy23.github.io/timetowakeup)
-
-## 📸 Screenshots
-
-### Home Page
-
-![Home Page](docs/images/home.png)
-_Welcome to Time To Wake Up - Start your day with a perfect cup of coffee_
-
-### Coffee Gallery
-
-![Coffee Gallery](docs/images/gallery.png)
-_Browse through our curated collection of coffee images_
-
-### About
-
-![About Page](docs/images/about.png)
-_Learn about our technologies and features_
-
-### Contact
-
-![Contact Page](docs/images/contact.png)
-_Get in touch with us through our professional contact form_
-
-### Features in Action
-
-<div align="center">
-  <img src="docs/images/search.png" alt="Search Functionality" width="400"/>
-  <img src="docs/images/form-validation.png" alt="Form Validation" width="400"/>
-  <img src="docs/images/success.png" alt="Success Message" width="400"/>
-</div>
+[🔗 Live Demo](timetowakeup-ndw9yu6cs-mohamadelgendy23s-projects.vercel.app)
 
 ## ✨ Features
 
