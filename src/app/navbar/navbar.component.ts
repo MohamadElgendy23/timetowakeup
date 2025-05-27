@@ -13,12 +13,17 @@ import { SearchService } from '../services/search.service';
 })
 export class NavbarComponent {
   searchQuery: string = '';
+  isMenuOpen: boolean = false;
 
   constructor(
     private searchService: SearchService,
     private router: Router,
   ) {
     this.searchQuery = this.searchService.getSearchQuery();
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
   onSearchChange() {
@@ -32,5 +37,10 @@ export class NavbarComponent {
   clearSearch() {
     this.searchQuery = '';
     this.searchService.updateSearchQuery('');
+  }
+
+  // Close menu when route changes
+  closeMenu() {
+    this.isMenuOpen = false;
   }
 }
