@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import {
@@ -7,7 +7,16 @@ import {
   Validators,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { trigger, transition, style, animate } from '@angular/animations';
+import { LoadingSpinnerComponent } from '../shared/loading-spinner/loading-spinner.component';
+import { ContactService } from '../services/contact.service';
+import {
+  trigger,
+  transition,
+  style,
+  animate,
+  query,
+  stagger,
+} from '@angular/animations';
 
 interface SocialLink {
   name: string;
@@ -19,7 +28,12 @@ interface SocialLink {
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, RouterModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    ReactiveFormsModule,
+    LoadingSpinnerComponent,
+  ],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
   animations: [
@@ -38,14 +52,37 @@ interface SocialLink {
         ),
       ]),
     ]),
+    trigger('staggerList', [
+      transition('* => *', [
+        query(
+          ':enter',
+          [
+            style({ opacity: 0, transform: 'translateY(20px)' }),
+            stagger(100, [
+              animate(
+                '0.3s ease-out',
+                style({ opacity: 1, transform: 'translateY(0)' }),
+              ),
+            ]),
+          ],
+          { optional: true },
+        ),
+      ]),
+    ]),
   ],
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   submitted = false;
   submitSuccess = false;
+  isLoading = false;
+  errorMessage = '';
+  recentSubmissions: any[] = [];
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private contactService: ContactService,
+  ) {
     this.contactForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
@@ -54,20 +91,41 @@ export class ContactComponent {
     });
   }
 
-  onSubmit() {
+  ngOnInit() {
+    this.loadRecentSubmissions();
+  }
+
+  loadRecentSubmissions() {
+    this.contactService.getSubmissions().subscribe((submissions) => {
+      this.recentSubmissions = submissions.slice(-3).reverse(); // Show last 3 submissions
+    });
+  }
+
+  async onSubmit() {
     this.submitted = true;
+    this.errorMessage = '';
 
     if (this.contactForm.valid) {
-      // Here you would typically send the form data to a backend service
-      console.log('Form submitted:', this.contactForm.value);
-      this.submitSuccess = true;
-      this.submitted = false;
-      this.contactForm.reset();
+      this.isLoading = true;
 
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        this.submitSuccess = false;
-      }, 5000);
+      try {
+        await this.contactService
+          .submitContactForm(this.contactForm.value)
+          .toPromise();
+        this.submitSuccess = true;
+        this.submitted = false;
+        this.contactForm.reset();
+        this.loadRecentSubmissions();
+
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          this.submitSuccess = false;
+        }, 5000);
+      } catch (error) {
+        this.errorMessage = 'Failed to send message. Please try again later.';
+      } finally {
+        this.isLoading = false;
+      }
     }
   }
 
