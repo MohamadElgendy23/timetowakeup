@@ -1,0 +1,30 @@
+/* Form input and textarea styles */
+input[type="text"],
+input[type="email"],
+textarea {
+  @apply border-gray-300 focus:border-blue-500 focus:ring-blue-500;
+  @apply block w-full rounded-md shadow-sm;
+  @apply transition duration-150 ease-in-out;
+}
+
+/* Error state styles */
+input.border-red-500,
+textarea.border-red-500 {
+  @apply border-red-500 focus:border-red-500 focus:ring-red-500;
+}
+
+/* Success message animation */
+.bg-green-100 {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
