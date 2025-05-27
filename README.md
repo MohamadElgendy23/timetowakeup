@@ -1,67 +1,127 @@
-# Timetowakeup
+# ☕ Time To Wake Up
 
-API Documentation: https://www.freepublicapis.com/coffee-api
+A modern, coffee-themed web application built with Angular and powered by AI. Discover beautiful coffee moments through our curated gallery and intelligent search system.
 
-Description:
+![Coffee App Banner](src/assets/background.png)
 
-This project utilizes Angular, TypeScript, and TailwindCSS in order to create an application that displays a random coffee image by the use of the Coffee API: https://www.freepublicapis.com/coffee-api. This project resembles something like where users can choose to start their days or when they wake up to a cup of coffee.
+## ✨ Features
 
-Why?:
+- 🖼️ **Dynamic Coffee Image Gallery**
 
-To enhance my skills in Angular, instead of just utilizing React all the time, which in my opinion is a very valuable mindset as a developer.
+  - Browse through a curated collection of coffee images
+  - Real-time search functionality
+  - Smooth animations and transitions
 
-## Development server
+- 🎨 **Modern UI/UX**
 
-To start a local development server, run:
+  - Responsive design for all devices
+  - Beautiful gradient backgrounds
+  - Interactive hover effects
+  - Loading states and animations
+
+- 📱 **Professional Contact System**
+
+  - Form validation with error handling
+  - Loading states and success messages
+  - Recent submissions display
+  - Social media integration
+
+- ♿ **Accessibility**
+  - ARIA labels and roles
+  - Keyboard navigation support
+  - Screen reader compatibility
+  - Proper form labeling
+
+## 🛠️ Technologies Used
+
+- **Angular** - Modern web framework for building scalable applications
+- **TypeScript** - Typed superset of JavaScript
+- **Tailwind CSS** - Utility-first CSS framework
+- **RxJS** - Reactive Extensions Library
+- **Cursor AI** - AI-powered coding assistant
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+
+### Installation
+
+1. Clone the repository
+
+   ```bash
+   git clone https://github.com/MohamadElgendy23/timetowakeup.git
+   ```
+
+2. Navigate to project directory
+
+   ```bash
+   cd timetowakeup
+   ```
+
+3. Install dependencies
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server
+
+   ```bash
+   ng serve
+   ```
+
+5. Open your browser and visit `http://localhost:4200`
+
+## 🧪 Testing
+
+The project includes comprehensive testing:
 
 ```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
+# Run unit tests
 ng test
-```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
+# Run end-to-end tests
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📱 Responsive Design
 
-## Additional Resources
+The application is fully responsive and works seamlessly across:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- 💻 Desktop
+- 📱 Mobile
+- 📟 Tablet
+- 🖥️ Large screens
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with [Angular](https://angular.io/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Developed using [Cursor AI](https://cursor.sh/)
+- Coffee images from various sources
+
+## 👤 Contact
+
+Mohamad Elgendy
+
+- GitHub: [@MohamadElgendy23](https://github.com/MohamadElgendy23)
+- LinkedIn: [mohamad-elgendy-4b3bb61ba](https://www.linkedin.com/in/mohamad-elgendy-4b3bb61ba/)
+
+## 🌟 Support
+
+Give a ⭐️ if you like this project!
