@@ -54,7 +54,7 @@ export class AboutComponent {
     },
     {
       name: 'Tailwind CSS',
-      icon: 'https://tailwindcss.com/_next/static/media/tailwindcss-mark.79614a5f61617ba49a0891494521226b.svg',
+      icon: 'https://stackdiary.com/wp-content/uploads/2022/10/Tailwind-CSS-15-Component-Libraries-UI-Kits.png',
       description: 'Utility-first CSS framework for rapid UI development',
     },
     {
@@ -64,7 +64,7 @@ export class AboutComponent {
     },
     {
       name: 'Cursor AI',
-      icon: 'https://cursor.sh/brand/logo-512.png',
+      icon: 'https://brianchristner.io/content/images/2024/09/Cursor-AI.png',
       description: 'AI-powered coding assistant for enhanced development',
     },
   ];
