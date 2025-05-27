@@ -30,9 +30,18 @@
       >
     </li>
   </ul>
-  <input
-    type="text"
-    class="flex justify-center items-center w-90 h-10 text-black bg-white placeholder:text-black p-3 mr-3 rounded-lg"
-    placeholder="Search"
-  />
+  <div class="relative mr-3">
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      (ngModelChange)="onSearchChange()"
+      class="w-64 h-10 px-4 py-2 text-black bg-white placeholder:text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+      placeholder="Search coffee images..."
+    />
+    <div *ngIf="searchQuery" class="absolute right-3 top-1/2 -translate-y-1/2">
+      <button (click)="clearSearch()" class="text-gray-500 hover:text-gray-700">
+        ✕
+      </button>
+    </div>
+  </div>
 </nav>
