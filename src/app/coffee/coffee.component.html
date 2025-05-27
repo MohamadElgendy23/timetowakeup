@@ -1,1 +1,51 @@
-<div></div>
+<div
+  class="min-h-screen p-8 pt-28 bg-gradient-to-br from-amber-50 to-orange-100"
+>
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <h1 class="text-4xl font-bold text-amber-900 mb-4">Coffee Gallery</h1>
+      <button
+        (click)="refreshImages()"
+        class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors duration-200 shadow-md"
+        [disabled]="loading"
+      >
+        {{ loading ? "Loading..." : "Refresh Images" }}
+      </button>
+    </div>
+
+    <!-- Loading State -->
+    <div *ngIf="loading" class="flex justify-center items-center min-h-[400px]">
+      <div
+        class="animate-spin rounded-full h-16 w-16 border-t-4 border-amber-600"
+      ></div>
+    </div>
+
+    <!-- Error State -->
+    <div
+      *ngIf="error"
+      class="text-center text-red-600 p-4 bg-red-100 rounded-lg"
+    >
+      {{ error }}
+    </div>
+
+    <!-- Image Grid -->
+    <div
+      *ngIf="!loading && !error"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+    >
+      <div *ngFor="let image of coffeeImages" class="group relative">
+        <div
+          class="aspect-square overflow-hidden rounded-xl shadow-lg bg-white"
+        >
+          <img
+            [src]="image"
+            alt="Coffee Image"
+            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

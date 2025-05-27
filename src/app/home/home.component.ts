@@ -12,6 +12,8 @@ export class HomeComponent {
   constructor(private router: Router) {}
 
   goToRandom() {
-    this.router.navigate(['/random']);
+    this.router.navigate(['/random'], {
+      state: { loadNew: true },
+    });
   }
 }
