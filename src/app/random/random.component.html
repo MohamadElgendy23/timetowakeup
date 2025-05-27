@@ -1,8 +1,16 @@
 <div
   class="flex items-center justify-center flex-col text-center min-h-[100vh]"
 >
+  <!-- Loading Spinner -->
+  <div
+    *ngIf="isLoading"
+    class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-amber-600"
+  ></div>
+
+  <!-- Coffee Image -->
   <img
-    src="{{ randomCoffee }}"
+    *ngIf="!isLoading && randomCoffee"
+    [src]="randomCoffee"
     alt="Random Coffee Image"
     class="w-96 h-96 object-cover rounded-lg shadow-lg"
   />

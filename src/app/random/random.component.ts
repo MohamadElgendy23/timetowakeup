@@ -12,6 +12,7 @@ import { Router, Navigation } from '@angular/router';
 })
 export class RandomComponent {
   randomCoffee: string = '';
+  isLoading: boolean = false;
 
   constructor(
     private apiService: ApiService,
@@ -31,16 +32,23 @@ export class RandomComponent {
   }
 
   private loadNewImage() {
+    this.isLoading = true;
     this.apiService.getRandomCoffee().subscribe({
       next: (response: any) => {
         const img = new Image();
         img.onload = () => {
           this.randomCoffee = response.file;
+          this.isLoading = false;
           localStorage.setItem('lastCoffeeImage', response.file);
+        };
+        img.onerror = () => {
+          this.isLoading = false;
+          console.error('Error loading image');
         };
         img.src = response.file;
       },
       error: (error) => {
+        this.isLoading = false;
         console.error('Error loading coffee image:', error);
       },
     });
