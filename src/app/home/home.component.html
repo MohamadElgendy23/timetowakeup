@@ -1,11 +1,16 @@
 <div
   class="flex items-center justify-center flex-col text-center min-h-[100vh]"
 >
-  <div class="flex flex-col justify-center items-center gap-5">
+  <div class="flex flex-col justify-center items-center gap-4">
     <h1 class="font-bold text-white text-9xl">Time To Wake Up</h1>
+    <h3
+      class="text-[45px] tracking-[1px] m-0 text-white font-serif font-extrabold"
+    >
+      Start your day with a lovely coffee :)
+    </h3>
     <button
       class="cursor-pointer relative text-white font-bold bg-emerald-400 hover:brightness-65 hover:ease transition-all inline-block text-lg text-center h-[42px] pt-0 pb-0 pl-[30px] pr-[30px]"
-      routerLink="/random"
+      (click)="goToRandom()"
     >
       Random Coffee
     </button>

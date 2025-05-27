@@ -1,12 +1,14 @@
 # Timetowakeup
 
-Description: 
+API Documentation: https://www.freepublicapis.com/coffee-api
 
-This project utilizes Angular, TypeScript, and TailwindCSS in order to create an application that displays a random coffee image by the use of the Coffee API: https://www.freepublicapis.com/coffee-api. This project resembles something like where users can choose to start their days or when they wake up to a cup of coffee. 
+Description:
+
+This project utilizes Angular, TypeScript, and TailwindCSS in order to create an application that displays a random coffee image by the use of the Coffee API: https://www.freepublicapis.com/coffee-api. This project resembles something like where users can choose to start their days or when they wake up to a cup of coffee.
 
 Why?:
 
-To enhance my skills in Angular, instead of just utilizing React all the time.
+To enhance my skills in Angular, instead of just utilizing React all the time, which in my opinion is a very valuable mindset as a developer.
 
 ## Development server
 
