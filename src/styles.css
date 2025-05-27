@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+.form-input {
+  @apply mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.form-input.error {
+  @apply border-red-500;
+}
+
+.form-textarea {
+  @apply mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.form-textarea.error {
+  @apply border-red-500;
+}
