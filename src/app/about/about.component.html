@@ -1,1 +1,167 @@
-<div></div>
+<div class="min-h-screen pt-28 bg-gradient-to-br from-amber-50 to-orange-100">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <!-- Hero Section -->
+    <div class="text-center mb-16" @fadeInUp>
+      <h1 class="text-5xl font-bold text-amber-900 mb-6">Time To Wake Up ☕</h1>
+      <p class="text-xl text-amber-800 max-w-2xl mx-auto">
+        A modern web application that brings the joy of coffee exploration to
+        your screen. Discover beautiful coffee moments through our curated
+        gallery and intelligent search system.
+      </p>
+    </div>
+
+    <!-- Features Section -->
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold text-amber-900 mb-8 text-center" @fadeInUp>
+        Key Features
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div
+          *ngFor="let feature of features; let i = index"
+          class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300"
+          @fadeInUp
+        >
+          <div class="flex items-center">
+            <div class="text-amber-500 mr-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <p class="text-lg text-gray-700">{{ feature }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technologies Section -->
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold text-amber-900 mb-8 text-center" @fadeInUp>
+        Technologies Used
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          *ngFor="let tech of technologies"
+          class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300"
+          @fadeInUp
+        >
+          <div class="flex flex-col items-center text-center">
+            <img
+              [src]="tech.icon"
+              [alt]="tech.name"
+              class="h-16 w-16 mb-4 object-contain"
+            />
+            <h3 class="text-xl font-semibold text-amber-900 mb-2">
+              {{ tech.name }}
+            </h3>
+            <p class="text-gray-600">{{ tech.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Development Section -->
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-16" @fadeInUp>
+      <h2 class="text-3xl font-bold text-amber-900 mb-6 text-center">
+        AI-Powered Development
+      </h2>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+        <div class="md:w-1/2">
+          <img
+            src="https://cursor.sh/brand/cursor.svg"
+            alt="Cursor AI"
+            class="w-full max-w-md mx-auto"
+          />
+        </div>
+        <div class="md:w-1/2">
+          <p class="text-lg text-gray-700 leading-relaxed">
+            This project was developed with the assistance of
+            <span class="font-semibold">Cursor AI</span>, a cutting-edge AI
+            coding assistant. The AI helped with:
+          </p>
+          <ul class="mt-4 space-y-2">
+            <li class="flex items-center text-gray-700">
+              <svg
+                class="h-5 w-5 text-amber-500 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              Code optimization and best practices
+            </li>
+            <li class="flex items-center text-gray-700">
+              <svg
+                class="h-5 w-5 text-amber-500 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              UI/UX design suggestions
+            </li>
+            <li class="flex items-center text-gray-700">
+              <svg
+                class="h-5 w-5 text-amber-500 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              Feature implementation guidance
+            </li>
+            <li class="flex items-center text-gray-700">
+              <svg
+                class="h-5 w-5 text-amber-500 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              Problem-solving and debugging
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center text-gray-600" @fadeInUp>
+      <p>Made with ❤️ and lots of ☕</p>
+    </div>
+  </div>
+</div>

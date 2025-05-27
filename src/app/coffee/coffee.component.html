@@ -7,7 +7,7 @@
       <h1 class="text-4xl font-bold text-amber-900 mb-4">Coffee Gallery</h1>
       <button
         (click)="refreshImages()"
-        class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors duration-200 shadow-md"
+        class="px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors duration-200 shadow-md cursor-pointer"
         [disabled]="loading"
       >
         {{ loading ? "Loading..." : "Refresh Images" }}
@@ -35,15 +35,26 @@
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
     >
       <div *ngFor="let image of coffeeImages" class="group relative">
-        <div
-          class="aspect-square overflow-hidden rounded-xl shadow-lg bg-white"
-        >
-          <img
-            [src]="image"
-            alt="Coffee Image"
-            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
-            loading="eager"
-          />
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="aspect-square overflow-hidden">
+            <img
+              [src]="image.url"
+              [alt]="image.description"
+              class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+              loading="eager"
+            />
+          </div>
+          <div class="p-4">
+            <p class="text-gray-600 text-sm mb-2">{{ image.description }}</p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                *ngFor="let tag of image.tags"
+                class="px-2 py-1 bg-amber-100 text-amber-800 text-xs rounded-full"
+              >
+                {{ tag }}
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

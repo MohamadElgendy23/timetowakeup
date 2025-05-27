@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ApiService } from '../api.service';
+import { ApiService, CoffeeImage } from '../api.service';
 import { SearchService } from '../services/search.service';
 import { Subscription } from 'rxjs';
 
@@ -12,8 +12,8 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./coffee.component.css'],
 })
 export class CoffeeComponent implements OnInit, OnDestroy {
-  allCoffeeImages: string[] = [];
-  coffeeImages: string[] = [];
+  allCoffeeImages: CoffeeImage[] = [];
+  coffeeImages: CoffeeImage[] = [];
   loading: boolean = true;
   error: string | null = null;
   private searchSubscription: Subscription;
@@ -61,10 +61,11 @@ export class CoffeeComponent implements OnInit, OnDestroy {
     if (!query.trim()) {
       this.coffeeImages = this.allCoffeeImages;
     } else {
-      // For now, we'll just filter based on the URL containing the query
-      // In a real application, you might want to use tags or other metadata
-      this.coffeeImages = this.allCoffeeImages.filter((url) =>
-        url.toLowerCase().includes(query.toLowerCase()),
+      const searchQuery = query.toLowerCase().trim();
+      this.coffeeImages = this.allCoffeeImages.filter(
+        (image) =>
+          image.tags.some((tag) => tag.toLowerCase().includes(searchQuery)) ||
+          image.description.toLowerCase().includes(searchQuery),
       );
     }
   }
