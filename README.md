@@ -12,23 +12,23 @@ https://timetowakeup.vercel.app/home
 
 Home Page:
 
-![Alt text](assets/home.png)
+![Alt text](./src/assets/home.png)
 
 Random Page (with random coffee image fetched from API):
 
-![Alt text](assets/random.png)
+![Alt text](./src/assets/random.png)
 
 Coffee Page (with all coffee images from API):
 
-![Alt text](assets/coffee.png)
+![Alt text](./src/assets/coffee.png)
 
 About Page:
 
-![Alt text](assets/about.png)
+![Alt text](./src/assets/about.png)
 
 Contact Page:
 
-![Alt text](assets/contact.png)
+![Alt text](./src/assets/contact.png)
 
 ## ✨ Features
 
