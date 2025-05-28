@@ -8,6 +8,28 @@ A modern, coffee-themed web application built with Angular and powered by AI. Di
 
 https://timetowakeup.vercel.app/home
 
+## Screenshots of Application
+
+Home Page: 
+
+![Alt text](./assets/home.png)
+
+Random Page (with random coffee image fetched from API): 
+
+![Alt text](./assets/random.png)
+
+Coffee Page (with all coffee images from API):
+
+![Alt text](./assets/coffee.png)
+
+About Page: 
+
+![Alt text](./assets/about.png)
+
+Contact Page: 
+
+![Alt text](./assets/contact.png)
+
 ## ✨ Features
 
 - 🖼️ **Dynamic Coffee Image Gallery**
